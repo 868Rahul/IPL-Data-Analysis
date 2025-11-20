@@ -9,12 +9,6 @@ __pycache__/
 output/plots/
 output/tables/
 
-# Data files (optional)
-data/*.csv
-data/*.xlsx
-data/raw/
-data/temp/
-
 # Environments
 .env
 .venv/
