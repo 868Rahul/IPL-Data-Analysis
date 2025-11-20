@@ -5,10 +5,6 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Output folders
-output/plots/
-output/tables/
-
 # Environments
 .env
 .venv/
