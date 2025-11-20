@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Output folders
+output/plots/
+output/tables/
+
+# Data files (optional)
+data/*.csv
+data/*.xlsx
+data/raw/
+data/temp/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# System / OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
