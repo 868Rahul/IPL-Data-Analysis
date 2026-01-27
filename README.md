@@ -1,102 +1,127 @@
-📊 IPL Data Analytics Project
-End-to-End Exploratory Data Analysis (EDA) on IPL Batting Data
+# 🏏 IPL 50+ Score Prediction System (EDA → Machine Learning → Deployment)
 
-This project performs complete Data Cleaning, Exploratory Data Analysis, and Visualization on IPL (Indian Premier League) batting records.
-Built using Python, Pandas, Matplotlib, Seaborn, this project is perfect for a Data Analytics portfolio.
+## 📌 Project Overview
 
-🚀 Features
-🧹 Data Cleaning & Preprocessing
+This project started as a **Data Analytics / EDA project** on IPL batting data and was later upgraded into a **full end-to-end Machine Learning system**.
 
-Remove invalid/missing entries
+🎯 **Goal:**  
+Predict whether a batsman will score **50+ runs** in an innings based on early/mid-innings match context.
 
-Fix numeric columns (runs, ballsfaced, strikerate)
+---
 
-Convert datatypes
+## 🎯 Target Variable
 
-Standardize column names
-
-Export cleaned dataset
-
-📈 Exploratory Data Analysis
-
-Top 10 batsmen (total runs)
-
-Strike Rate Leaders (Min 100 balls)
-
-Most Fours & Sixes
-
-Team-wise run contribution
-
-Season-wise run trend analysis
-
-IPL performance insights
-
-🎨 Visualizations
-
-All graphs are saved automatically inside:
-
-/output/plots/   → All charts
-
-/output/tables/  → CSV summaries (Top batsmen, SR leaders, etc.)
+high_score = 1 → Batsman scores 50+ runs
+high_score = 0 → Batsman does NOT score 50+ runs
 
 
-Includes:
+---
 
-Bar Charts
+## 📊 Dataset
 
-Pie Charts
+- Rows: ~15,720  
+- Original columns: Match, player, innings, and performance data  
+- Final ML features (clean & realistic):
 
-Line Graphs
-
-
-💻 Technologies Used
-
-Python
-
-Pandas
-
-NumPy
-
-Matplotlib
-
-Seaborn
-
-Jupyter Notebook
-
-🧪 How to Run the Project
-1️⃣ Clone the Repository
-git clone https://github.com/868Rahul/IPL-Data-Analysis.git
-cd IPL-Data-Analysis
-
-2️⃣ Install Dependencies
-pip install pandas matplotlib seaborn
-
-3️⃣ Run the Jupyter Notebook
-jupyter notebook analysis/analysis.ipynb
-
-OR Run Python Script
-python analysis/analysis.py
+ballsfaced
+minutes
+runningscore
+runningover
+isnotout
+captain
+current_innings
+innings_id
 
 
-All graphs and tables will be automatically saved to /output/.
+---
 
-⭐ What You Will Learn
+## 🧹 Phase 1: Data Cleaning & EDA
 
-Real-world data cleaning
+- Removed missing & invalid values  
+- Fixed data types  
+- Standardized column names  
+- Generated summary tables  
+- Visualized:
+  - Top batsmen by runs
+  - Strike rate leaders
+  - Team-wise & season-wise trends
+- Exported cleaned dataset
 
-Handling messy datasets
+---
 
-Grouping & aggregation in Pandas
+## 🛠️ Feature Engineering
 
-IPL sports analytics techniques
+- Created target column:
+```python
+high_score = (runs >= 50)
+Removed data leakage columns:
 
-Creating reusable analysis scripts
+runs, fours, sixes, strikerate, etc.
 
-Professional visualization saving
+Selected only deployable numeric features
+```
+--- 
+## 🤖 Models Trained
 
-Building a clean portfolio-ready repository
+Logistic Regression (baseline)
 
-🙌 Author
+Random Forest
+
+🏆 Gradient Boosting (Best Model)
+
+---
+
+##  📈 Evaluation Metrics
+
+Precision
+
+Recall
+
+F1-score (main metric due to class imbalance)
+
+ROC-AUC
+
+Confusion Matrix
+
+---
+
+## 🏆 Results Summary
+| Model                | F1-score  | ROC-AUC   |
+| -------------------- | --------- | --------- |
+| Logistic Regression  | ~0.77     | ~0.98     |
+| Random Forest        | ~0.74     | ~0.97     |
+| 🏆 Gradient Boosting | **~0.80** | **~0.98** |
+
+---
+
+## 🧠 Key ML Concepts Used
+
+End-to-end ML workflow
+
+Feature engineering
+
+Data leakage prevention
+
+Train-test split
+
+StandardScaler
+
+Model comparison
+
+Gradient Boosting
+
+F1-score for imbalanced classification
+
+Pipeline-based training
+
+Model deployment
+
+---
+
+## 👨‍💻 Author
 
 Rahul Singh
-Data Analytics | Python | Machine Learning
+BE Artificial Intelligence & Data Science
+India 🇮🇳
+
+---

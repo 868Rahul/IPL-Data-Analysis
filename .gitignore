@@ -17,3 +17,9 @@ Thumbs.db
 
 # VS Code
 .vscode/
+
+#models
+/models/
+
+#Notes
+/This_Project_Notes.pdf
