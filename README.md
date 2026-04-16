@@ -94,6 +94,26 @@ Confusion Matrix
 
 ---
 
+## 🚀 Running the Application
+
+### Prerequisites
+- Python 3.8+
+- Install dependencies: `pip install -r requirements.txt`
+
+### Run the Streamlit App
+```bash
+streamlit run app.py
+```
+
+The app provides:
+- **Home**: Overview of the project
+- **Data Exploration**: View data, statistics, and visualizations
+- **Feature Engineering**: See how features are prepared
+- **Modeling**: Train and evaluate models
+- **Prediction**: Make predictions for 50+ runs
+
+---
+
 ## 🧠 Key ML Concepts Used
 
 End-to-end ML workflow
